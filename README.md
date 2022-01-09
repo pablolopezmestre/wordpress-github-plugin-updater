@@ -1,5 +1,5 @@
 # WordPress GitHub Plugin Updater
-Update a WordPress plugin from GitHub private repository.
+Updates a WordPress plugin from GitHub private repository.
 
 ## Usage
 Simply adds this lines to your main plugin file:
@@ -18,12 +18,12 @@ if (is_admin()) {
 }
 ```
 
-* Set your GitHub user name in GHPU_USERNAME constant.
-* Set your GitHub repository name in GHPU_REPOSITORY constant.
-* Set your GitHub token in GHPU_AUTH_TOKEN constant. You can get this in Your Account => Settings => Developer Settings => Personal access tokens => Generate new token.
-* Include GhPluginUpdater class
+* Sets your GitHub user name in GHPU_USERNAME constant.
+* Sets your GitHub repository name in GHPU_REPOSITORY constant.
+* Sets your GitHub token in GHPU_AUTH_TOKEN constant. You can get this in Your Account => Settings => Developer Settings => Personal access tokens => Generate new token.
+* Includes GhPluginUpdater class
 
 ## Additional information
-You have more information (in Spanish) in my [blog](https://desarrollowp.com/blog/tutoriales/como-actualizar-un-plugin-de-wordpress-desde-un-repositorio-privado-de-github/).
+You have more information (in Spanish) on my [blog](https://desarrollowp.com/blog/tutoriales/como-actualizar-un-plugin-de-wordpress-desde-un-repositorio-privado-de-github/).
 
 If you have any comment, suggestion or similar, plese use discussions or pull requests.

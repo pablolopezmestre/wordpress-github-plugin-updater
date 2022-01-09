@@ -2,11 +2,15 @@
 
 declare(strict_types=1);
 
+/**
+ * Update WordPress plugin from GitHub Private Repository.
+ */
 class GhPluginUpdater
 {
     private $file;
     private $plugin_data;
     private $basename;
+    private $active = false;
     private $github_response;
 
     public function __construct($file)
@@ -29,9 +33,7 @@ class GhPluginUpdater
     /**
      * If new version exists, update transient with GitHub info.
      *
-     * @param object $transient
-     *
-     * @return object
+     * @param object $transient Transient object with plugins information.
      */
     public function modify_transient(object $transient): object
     {
@@ -112,7 +114,9 @@ class GhPluginUpdater
         $wp_filesystem->move($result['destination'], $install_directory);
         $result['destination'] = $install_directory;
 
-        activate_plugin($this->basename);
+        if ($this->active) {
+            activate_plugin($this->basename);
+        }
 
         return $result;
     }
@@ -132,6 +136,8 @@ class GhPluginUpdater
 
             if (isset($query['access_token'])) {
                 $parsed_args['headers']['Authorization'] = 'token ' . $query['access_token'];
+
+                $this->active = is_plugin_active($this->basename);
             }
         }
 
