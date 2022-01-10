@@ -26,4 +26,4 @@ if (is_admin()) {
 ## Additional information
 You have more information (in Spanish) on my [blog](https://desarrollowp.com/blog/tutoriales/como-actualizar-un-plugin-de-wordpress-desde-un-repositorio-privado-de-github/).
 
-If you have any comment, suggestion or similar, plese use discussions or pull requests.
+If you have any comment, suggestion or similar, please use discussions or pull requests.
