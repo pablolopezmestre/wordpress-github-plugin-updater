@@ -118,7 +118,7 @@ class GhPluginUpdater
             activate_plugin($this->basename);
         }
 
-        return $result;
+        return $response;
     }
 
     /**
