@@ -106,7 +106,7 @@ class GhPluginUpdater
      * @param array $hook_extra Extra arguments passed to hooked filters.
      * @param array $result     Installation result data.
      */
-    public function after_install(bool $response, array $hook_extra, array $result): array
+    public function after_install(bool $response, array $hook_extra, array $result): bool
     {
         global $wp_filesystem;
 
