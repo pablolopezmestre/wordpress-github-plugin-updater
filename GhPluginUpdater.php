@@ -44,7 +44,7 @@ class GhPluginUpdater
         $this->get_repository_info();
         $this->get_plugin_data();
 
-        if (version_compare($this->github_response['tag_name'], $transient->checked[$this->basename], 'gt')) {
+        if (version_compare($this->github_response['tag_name'] ?? 0, $transient->checked[$this->basename], 'gt')) {
             $plugin = [
                 'url' => $this->plugin_data['PluginURI'],
                 'slug' => current(explode('/', $this->basename)),
