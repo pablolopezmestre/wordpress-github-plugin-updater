@@ -23,6 +23,10 @@ if (is_admin()) {
 * Sets your GitHub token in GHPU_AUTH_TOKEN constant. You can get this in Your Account => Settings => Developer Settings => Personal access tokens => Generate new token.
 * Includes GhPluginUpdater class
 
+## Important Version Requirements
+* GitHub release tag names must be numbers only (e.g. 1.0.0) - do not use prefix tags like v1.0.0
+* The plugin version in your main plugin file must match the GitHub release tag version for updates to work correctly
+
 ## Additional information
 You have more information (in Spanish) on my [blog](https://desarrollowp.com/blog/tutoriales/como-actualizar-un-plugin-de-wordpress-desde-un-repositorio-privado-de-github/).
 
